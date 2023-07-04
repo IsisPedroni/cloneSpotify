@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+:root {
+    --default-green:#1db954;
+    --light-green: #1ed760;
+}
 
 *{
     box-sizing: border-box;
@@ -14,7 +18,7 @@ body{
 /* Utility class */
 
 .btn-primary{
-    background: #1db954;
+    background: var(--default-green);
     color: white;
     text-transform: uppercase;
     padding: 15px 60px;
@@ -22,7 +26,14 @@ body{
     border-radius: 30px;
     letter-spacing: 1px;
     font-weight: bold;
+    transition:  all 300ms ease;
 }
+
+.btn-primary:hover{
+    background: var(--light-green);
+    cursor: pointer;
+}
+
  .logo{
     height: 40px;
     width: auto;
@@ -58,6 +69,12 @@ body{
 
 #navbar .navbar-contaneir ul li{
     padding: 0 20px;
+    transition: all 300ms ease;
+}
+
+#navbar .navbar-contaneir ul li:hover{
+    color: var(--default-green);
+    cursor: pointer;
 }
 
 #navbar .navbar-contaneir ul li:nth-child(3){
@@ -73,7 +90,7 @@ body{
     justify-content: center;
     align-items: center;
     color: white;
-    background: url(./img/musicaspotify.jpg) center center/cover;
+    background: url(./img/imgBackground.jpg) center center/cover;
     background-color: rgba(0, 0, 0, 0.4);
     background-blend-mode: color;
 }
@@ -105,6 +122,7 @@ body{
     display: flex;
     width: 60%;
     margin: auto;
+    justify-content: space-between;
 }
 
 #footer .footer-content .footer-menu{
@@ -115,6 +133,14 @@ body{
 
 #footer .footer-content .footer-menu .footer-menu-item{
     margin: 26px 0;
+    transition: all 300ms ease;
+
+}
+
+#footer .footer-content .footer-menu .footer-menu-item:hover{
+    color: var(--default-green);
+    cursor: pointer;
+
 }
 
 #footer .footer-content .footer-menu p{
@@ -133,6 +159,13 @@ body{
 .socials i{
     margin:0 20px;
     font-size: 1.7rem;
+    transition: all 300ms ease;
+
+}
+
+.socials i:hover{
+    color: var(--default-green);
+    cursor: pointer;
 }
 
 /* Footer Info */
@@ -146,6 +179,7 @@ body{
     font-weight: bold;
     color: #919496;
     font-size: 0.75rem;
+    padding-top: 40px;
 }
 
 .footer-info .footer-info-items{
@@ -155,11 +189,12 @@ body{
 
 .footer-info .footer-info-items .footer-info-item{
     margin: 0 10px;
-
+    transition: all 300ms ease;
 }
 
-.footer-info .rights{
-
+.footer-info .footer-info-items .footer-info-item:hover{
+    color: var(--default-green);
+    cursor: pointer;
 }
 
 .footer-info .rights .country{
